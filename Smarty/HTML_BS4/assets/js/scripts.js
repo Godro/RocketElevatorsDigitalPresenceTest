@@ -4104,11 +4104,11 @@ var numE = document.getElementById("cage").value;
 
 if(standard.checked==true) {
     document.getElementById("1elevator").value = "The unit price for a standard elevator shaft is $7565"
-    document.getElementById("totalB").value = (numE * 7565)
+    document.getElementById("totalB").value = (numE * 7565) 
         var totalB = document.getElementById("totalB").value
-    document.getElementById("insF").value = totalB * 0.10
+    document.getElementById("insF").value = (totalB * 0.10) 
         var insF = document.getElementById("insF").value;
-    document.getElementById("bigTotal").value = +totalB + +insF;
+    document.getElementById("bigTotal").value =  +totalB + +insF + " $";
     
 }
 else if(premium.checked==true) {
@@ -4117,7 +4117,7 @@ else if(premium.checked==true) {
         var totalB = document.getElementById("totalB").value
     document.getElementById("insF").value = totalB * 0.13
         var insF = document.getElementById("insF").value;
-    document.getElementById("bigTotal").value = +totalB + +insF;
+    document.getElementById("bigTotal").value = +totalB + +insF + " $";
 
 }
 
@@ -4127,7 +4127,7 @@ else if(excelium.checked==true){
         var totalB = document.getElementById("totalB").value
     document.getElementById("insF").value = totalB * 0.16
         var insF = document.getElementById("insF").value;
-    document.getElementById("bigTotal").value = +totalB + +insF;
+    document.getElementById("bigTotal").value = +totalB + +insF + " $";
 }
     
 }

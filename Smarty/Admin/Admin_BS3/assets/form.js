@@ -17,6 +17,7 @@ function show(select){
         if (select.value==2) {
             document.getElementById("com-details").style.display = "block";
             document.getElementById("price").style.display = "block";
+    
         } else {
          document.getElementById("com-details").style.display = "none";
         }   
@@ -84,22 +85,42 @@ function hyb(input){
     }
 
 
-    function oneElevator() {
+  
+function oneElevator() {
 
-        var standard = document.getElementById("standard");
-        var premium = document.getElementById("premium");
-        var excelium = document.getElementById("excelium");
-        var numE = document.getElementById("cage").value;
+var standard = document.getElementById("standard");
+var premium = document.getElementById("premium");
+var excelium = document.getElementById("excelium");
+var numE = document.getElementById("cage").value;
 
 
-        if(standard.checked==true) {
-            document.getElementById("1elevator").value = "The unit price for a standard elevator shaft is $7565"
-            document.getElementById("totalB").value = (numE * 7565)}
-        else if(premium.checked==true) {
-            document.getElementById("1elevator").value = "The unit price for a premium elevator shaft is $12,345";
-            document.getElementById("totalB").value ="$" + numE * 12345}
-        else if(excelium.checked==true){
-            document.getElementById("1elevator").value = "The unit price for a excelium elevator shaft is $15,400";
-            document.getElementById("totalB").value ="$" + numE * 15400;}
-            
+
+if(standard.checked==true) {
+    document.getElementById("1elevator").value = "The unit price for a standard elevator shaft is $7565"
+    document.getElementById("totalB").value = (numE * 7565)
+        var totalB = document.getElementById("totalB").value
+    document.getElementById("insF").value = totalB * 0.10
+        var insF = document.getElementById("insF").value;
+    document.getElementById("bigTotal").value = +totalB + +insF;
+    
+}
+else if(premium.checked==true) {
+    document.getElementById("1elevator").value = "The unit price for a premium elevator shaft is $12,345";
+    document.getElementById("totalB").value = numE * 12345
+        var totalB = document.getElementById("totalB").value
+    document.getElementById("insF").value = totalB * 0.13
+        var insF = document.getElementById("insF").value;
+    document.getElementById("bigTotal").value = +totalB + +insF;
+
+}
+
+else if(excelium.checked==true){
+    document.getElementById("1elevator").value = "The unit price for a excelium elevator shaft is $15,400";
+    document.getElementById("totalB").value = numE * 15400;
+        var totalB = document.getElementById("totalB").value
+    document.getElementById("insF").value = totalB * 0.16
+        var insF = document.getElementById("insF").value;
+    document.getElementById("bigTotal").value = +totalB + +insF;
+}
+    
 }
