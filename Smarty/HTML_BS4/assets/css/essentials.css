@@ -75,6 +75,12 @@
 /* Navbar container */
 
   /* Navbar container */
+
+  .dropbtn1 {
+
+	color: white;
+	background-color: black;
+  }
 .navbar1 {
 	overflow: hidden;
 	background-color: #333;
